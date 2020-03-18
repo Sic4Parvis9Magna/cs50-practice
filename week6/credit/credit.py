@@ -52,13 +52,8 @@ def print_card_type(digits_list):
     ax_num = 3
     master_num = 5
 
-    for index in range(16):
-        temp_val = digits_list[index]
-
-        if temp_val > -1:
-            first_digit = temp_val
-            second_digit = digits_list[index + 1]
-            break
+    first_digit = digits_list[0]
+    second_digit = digits_list[1]
     
     if first_digit == ax_num and (second_digit in [4,7]):
         print("AMEX")
