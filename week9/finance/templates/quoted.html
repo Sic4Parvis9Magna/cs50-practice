@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    {%if result %}
+    <table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Company name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Symbol</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>{{ result.name}}</td>
+        <td>{{ result.price}}</td>
+        <td>{{ result.symbol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    {% else %}
+    <div>No data found for {{symbol}}<div>
+    {% endif %}
+{% endblock %}

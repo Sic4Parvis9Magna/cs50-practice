@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div> this is your home page!</b>
+    {% if results %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Company</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Holding</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for result in results%}
+          <tr>
+            <td>{{ result.stockname}}</td>
+            <td>{{ result.company}}</td>
+            <td>{{ result.amount}}</td>
+            <td>{{ result.price}}</td>
+            <td>{{ result.holding}}</td>
+          </tr>
+        {% endfor %}  
+        </tbody>
+    </table>
+    {% endif %}
+    <div>Your current balance</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Cash</th>
+            <th scope="col">Stocks</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ balance.cash}}</td>
+            <td>{{ balance.stocks}}</td>
+            <td>{{ balance.total}}</td>
+          </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+{% if logout %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    You successfully logged out!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <script>
+    $(document).ready(function() {
+        // show the alert
+        setTimeout(function() {
+            $(".alert").delay(4000).slideUp(200, function() {
+                $(this).alert('close');
+            });
+        }, 2000);
+    });
+    </script>
+{% endif %}
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+{% endblock %}

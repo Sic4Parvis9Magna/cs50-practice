@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+    
+{% block main %}
+{% if bought %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    You successfully bought {{ bought.number }} of {{ bought.stock }}!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <script>
+    $(document).ready(function() {
+        // show the alert
+        setTimeout(function() {
+            $(".alert").delay(4000).slideUp(200, function() {
+                $(this).alert('close');
+            });
+        }, 2000);
+    });
+    </script>
+{% endif %}
+{% if error %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{ error.message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <script>
+    $(document).ready(function() {
+        // show the alert
+        setTimeout(function() {
+            $(".alert").delay(4000).slideUp(200, function() {
+                $(this).alert('close');
+            });
+        }, 2000);
+    });
+    </script>
+{% endif %}
+    <form action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="symbol" placeholder="Stock symbol" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="shares" placeholder="Number of shares" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+{% endblock %}
