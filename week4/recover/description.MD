@@ -3,6 +3,13 @@
 Implement a program that recovers JPEGs from a forensic image, per the below.
 
 `./recover card.raw`
+# Table of Contents
+* [Bachground](#bachground)
+* [Specification](#specification)
+* [Usage](#usage)
+* [Hints](#hints)
+* [Testing](#testing)
+* [How to Submit](#how-to-submit)
 
 ## Bachground
 
@@ -73,3 +80,18 @@ If you’d like to create a new type to store a byte of data, you can do so via 
 typedef uint8_t BYTE;
 ```
 Keep in mind, too, that you can read data from a file using `fread`, which will read data from a file into a location in memory and return the number of items successfully read from the file.
+
+## Testing
+Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+```
+check50 cs50/problems/2020/spring/recover
+```
+Execute the below to evaluate the style of your code using `style50`.
+```
+style50 recover.c
+```
+## How to Submit
+Execute the below, logging in with your GitHub username and password when prompted. For security, you’ll see asterisks (`*`) instead of the actual characters in your password.
+```
+submit50 cs50/problems/2020/spring/recover
+```

@@ -4,6 +4,28 @@ Implement a program that applies filters to BMPs, per the below.
 ```
 $ ./filter -r image.bmp reflected.bmp
 ```
+# Table of Contents
+* [Background](#background)
+    * [Bitmaps](#bitmaps)
+    * [A Bit(map) More Technical](#a-bitmap-more-technical)
+* [Image Filtering](#image-filtering)    
+    * [Grayscale](#grayscale)    
+    * [Sepia](#sepia)    
+    * [Reflection](#reflection)    
+    * [Blur](#blur)
+* [Getting Started](#getting-started)
+* [Understanding](#understanding)
+    * [bmp.h](#bmph)
+    * [filter.c](#filterc)
+    * [helpers.h](#helpersh)
+    * [helpers.c](#helpersc)
+    * [Makefile](#makefile)
+* [Specification](#specification)
+* [Usage](#usage)
+* [Hints](#hints)
+* [Testing](#testing)
+* [How to Submit](#how-to-submit)
+
 
 # Background
 ## Bitmaps
@@ -160,4 +182,23 @@ $ ./filter -r infile.bmp outfile.bmp
 **Blur**
 ```
 $ ./filter -b infile.bmp outfile.bmp
+```
+## Hints
+* The values of a pixel’s `rgbtRed`, `rgbtGreen`, and `rgbtBlue` components are all integers, so be sure to round any floating-point numbers to the nearest integer when assigning them to a pixel value!
+
+## Testing
+Be sure to test all of your filters on the sample bitmap files provided!
+
+Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+```
+check50 cs50/problems/2020/spring/filter/more
+```
+Execute the below to evaluate the style of your code using `style50`.
+```
+style50 helpers.c
+```
+## How to Submit
+Execute the below, logging in with your GitHub username and password when prompted. For security, you’ll see asterisks (`*`) instead of the actual characters in your password.
+```
+submit50 cs50/problems/2020/spring/filter/more
 ```

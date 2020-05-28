@@ -3,6 +3,28 @@ Implement a program that applies filters to BMPs, per the below.
 ```
 $ ./filter -r image.bmp reflected.bmp
 ```
+# Table of Contents
+* [Background](#background)    
+    * [Bitmaps](#bitmaps)    
+    * [A Bit(map) More Technical](#a-bitmap-more-technical)
+* [Image Filtering](#image-filtering)    
+    * [Grayscale](#grayscale)    
+    * [Reflection](#reflection)    
+    * [Blur](#blur)    
+    * [Edges](#edges)
+* [Getting Started](#getting-started)
+* [Understanding](#understanding)    
+    * [bmp.h](#bmph)    
+    * [filter.c](#filterc)    
+    * [helpers.h](#helpersh)    
+    * [helpers.c](#helpersc)    
+    * [Makefile](#makefile)
+* [Specification](#specification)
+* [Usage](#usage)
+* [Hints](#hints)
+* [Testing](#testing)
+* [How to Submit](#how-to-submit)
+
 ## Background
 
 ### Bitmaps
