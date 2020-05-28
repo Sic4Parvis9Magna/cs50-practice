@@ -1,0 +1,28 @@
+.main
+{
+    background-color: white;
+    color: black;
+}
+
+.games
+{
+    background-color: lightskyblue;
+    color: greenyellow;
+}
+
+.anime
+{
+    background-color: pink;
+    color: gray;
+}
+
+.covid19
+{
+    background-color: red;
+    color: black;
+}
+
+.carousel {
+    width:640px;
+    height:360px;
+  }
